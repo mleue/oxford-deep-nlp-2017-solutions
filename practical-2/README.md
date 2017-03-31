@@ -44,7 +44,7 @@ solved in TensorFlow
 * doing some more elaborate preprocessing (removing most frequent and least frequent words from the texts) really helps (i.e. removing noise) also because this removes a lot of the words that we didn't have a pretrained glove vector fora
 
 * plotting the label predictions and the ground truth on the test set on top of each other makes it clear that there simply doesn't seem to be enough data for some of the labels to effectively learn to classify them
-![predictions over ground truth on test set][./pred_truth_test.png]
+![predictions over ground truth on test set](./pred_truth_test.png)
 
 * the overall dataset is dominated by 50% of the label 'ooo' (neither T nor E nor D) with some labels only having around ~20 datapoints overall so there is really not much to learn from for our network and it is not surprising that it is very hard to predict especially those rare labels
-![labels histogram][./labels_histogram.png]
+![labels histogram](./labels_histogram.png)
