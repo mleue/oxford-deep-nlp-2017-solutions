@@ -1,5 +1,11 @@
 # practical 2
 problem description in `practical2.md`
+solved in TensorFlow
+
+## how to use glove word vectors
+* download e.g. the 6b (trained on 6 billion words of text) vectors from here: [http://nlp.stanford.edu/data/glove.6B.zip](http://nlp.stanford.edu/data/glove.6B.zip)
+* to import them via `gensim.models.KeyedVectors` (like I do in the notebook) you have to first convert them to a compatible format via:  
+`python -m gensim.scripts.glove2word2vec --input glove.6B.60d.txt --output glove.6B.50d.w2vformat.txt`
 
 ## questions
 
