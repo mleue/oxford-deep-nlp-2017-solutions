@@ -33,7 +33,9 @@ solved in TensorFlow
 * adam showed the best performance, however standard sgd was basically the same
 * at first I thought it might be worth trying adagrad that might train better by being able to apply higher gradients into the word embeddings but it didn't turn out to be all that different to adam or sgd
 
-7. graph is in the notebook
+7. graph is at the end of the notebook
+* it seems like the weight embeddings for many of the labels that we failed to learn are lumped close together and also very close to the graph origin
+* this indicates that we haven't really learned much about them and therefore fail to predict them
 
 ## some insights
 
@@ -41,9 +43,9 @@ solved in TensorFlow
 
 * as a sanity check it is worth thinking about the expected cross-entropy loss for a totally random model...since it is basically -log(yhat\_max) for a one-hot ground truth vector, the expected value for 8 classes is -log(1/8) ~ 2.1 (so you should converge towards something significantly lower than that)
 
-* doing some more elaborate preprocessing (removing most frequent and least frequent words from the texts) really helps (i.e. removing noise) also because this removes a lot of the words that we didn't have a pretrained glove vector fora
+* doing some more elaborate preprocessing (removing most frequent and least frequent words from the texts) really helps (i.e. removing noise) also because this removes a lot of the words that we didn't have a pretrained glove vector for
 
-* plotting the label predictions and the ground truth on the test set on top of each other makes it clear that there simply doesn't seem to be enough data for some of the labels to effectively learn to classify them  
+* plotting the label predictions and the ground truth on the test set on top of each other makes it clear that there simply doesn't seem to be enough data for some of the labels
 
 ![predictions over ground truth on test set](./pred_truth_test.png)
 
