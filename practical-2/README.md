@@ -9,7 +9,7 @@ solved in TensorFlow
 
 ## questions
 
-1. (random init + train) vs. (glove init + train) vs. (glove init + fixed)
+1. influence of word embeddings (random init + train) vs. (glove init + train) vs. (glove init + fixed)?
 * embeddings initialized with glove vectors and backpropagating into them was found to be the best variant with ~67% accuracy on the test set
 * worst performance was random init and no backprop into the embeddings, this basically failed to learn anything which makes it clear that proper embeddings are very important for making sense out of text
 
